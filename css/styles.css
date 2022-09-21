@@ -273,7 +273,8 @@ button {
 }
 
 .feat .title,
-.join .invite {
+.join .invite,
+.do .text {
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
@@ -297,6 +298,15 @@ button {
 .team > .title,
 .clients .title {
   margin-bottom: 50px;
+}
+
+.do li {
+  position: relative;
+}
+.do .text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 /* our team */
