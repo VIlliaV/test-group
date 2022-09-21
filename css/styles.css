@@ -479,13 +479,35 @@ button {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
+.portf-img {
+  position: relative;
+  overflow: hidden;
+}
+.portf-img .text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 18px;
+  line-height: 1.55;
+  padding: 63px 24px;
+  color: var(--primary-bkg-color);
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translateY(101%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portf-list li:hover .portf-img > .text {
+  transform: translateY(0);
+}
+
 .portf-list .title {
   text-align: left;
   font-size: 18px;
   line-height: 2;
   margin-bottom: 4px;
 }
-.portf-list .text {
+
+.portf-inner .text {
   font-size: 16px;
   line-height: 1.87;
 }
