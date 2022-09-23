@@ -463,7 +463,7 @@ button {
   pointer-events: none;
 }
 .backdrop.is-hidden .modal {
-  transform: scale(0.2) rotate(2turn);
+  transform: scale(0.2) rotate3d(1, 1, 1, 1440deg);
 }
 
 .modal {
