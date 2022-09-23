@@ -494,8 +494,11 @@ button {
   border-radius: 50%;
     align-items: center;
     color: #000000;
+  
 }
-
+.btn-modal .icon {
+  z-index: 9999;
+}
 /* PORTFOLIO */
 .btn-list {
   margin-bottom: 50px;
