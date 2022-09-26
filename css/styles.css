@@ -541,6 +541,7 @@ button {
   position: absolute;
   top: 0;
   left: 0;
+  height: 100%;
   font-size: 18px;
   line-height: 1.55;
   padding: 63px 24px;
