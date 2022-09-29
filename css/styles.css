@@ -58,7 +58,8 @@ button {
   cursor: pointer;
   text-align: center;
 }
-.input {
+.input,
+.area {
   border-width: 0px;
   border-style: none;
 }
@@ -210,7 +211,11 @@ button {
 
 .hero {
   background-color: var(--thirdary-bkg-color);
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../images/hero-bkg.jpg');
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url('../images/hero-bkg.jpg');
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -231,7 +236,8 @@ button {
 }
 
 .hero .button,
-.subscription .btn {
+.subscription .btn,
+.userdata .btn {
   color: var(--primary-bkg-color);
   background-color: var(--accent-color);
   font-weight: 700;
@@ -246,7 +252,9 @@ button {
 .hero .button:hover,
 .hero .button:focus,
 .subscription .btn:hover,
-.subscription .btn:focus {
+.subscription .btn:focus,
+.userdata .btn:hover,
+.userdata .btn:focus {
   background-color: #188ce8;
 }
 
@@ -325,7 +333,8 @@ button {
 
 .team-item {
   background-color: var(--primary-bkg-color);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 
@@ -353,7 +362,8 @@ button {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .team-box .link {
   background-color: var(--primary-bkg-color);
@@ -377,7 +387,8 @@ button {
   border: 1px solid var(--icon-color);
   border-radius: 4px;
   color: var(--icon-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients .link:hover,
@@ -495,7 +506,8 @@ button {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   visibility: visible;
-  transition: opacity 1000ms cubic-bezier(0.4, 0, 0.2, 1), visibility 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 1000ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 1000ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden {
@@ -515,7 +527,8 @@ button {
   min-width: 528px;
   min-height: 581px;
   background-color: #ffffff;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   transition: transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -532,6 +545,113 @@ button {
   border-radius: 50%;
   align-items: center;
   color: #000000;
+}
+.btn-modal:hover,
+.btn-modal:focus {
+  color: var(--accent-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.userdata {
+  padding: 40px;
+}
+.userdata-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  color: var(--secondary-text-color);
+  margin-bottom: 12px;
+}
+
+.userdata .text,
+.userdata .input,
+.userdata .area {
+  display: block;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: var(--primary-text-color);
+}
+.userdata .text {
+  margin-bottom: 4px;
+}
+
+.userdata .field {
+  position: relative;
+  margin-bottom: 10px;
+}
+.userdata .input {
+  width: 100%;
+  height: 40px;
+  padding-left: 31px;
+  outline: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.userdata .input:focus {
+  outline: 1px solid var(--accent-color);
+}
+.userdata .icon {
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+  left: 10px;
+  color: var(--secondary-text-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.userdata .input:focus + .icon {
+  color: var(--accent-color);
+}
+.userdata .area {
+  width: 100%;
+  height: 120px;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  resize: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.userdata .area:focus {
+  border: 1px solid var(--accent-color);
+  outline: 0px solid var(--primary-bkg-color);
+}
+.userdata .area::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.userdata .applybox {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.applybox .check {
+  appearance: none;
+}
+.applybox .check:checked + .conditions > .check-icon {
+  background-origin: border-box;
+  background-size: contain;
+  background-image: url(../images/icon-check.svg);
+  border-color: transparent;
+}
+.apply-link {
+  color: var(--accent-color);
+}
+.conditions .check-icon {
+  position: absolute;
+  top: 50%;
+  left: 7px;
+  width: 16px;
+  height: 15px;
+  translate: 0 -50%;
+  border: 2px solid var(--secondary-text-color);
+  border-radius: 2px;
+}
+.userdata .btn {
+  display: block;
+  margin: 0 auto;
 }
 
 /* PORTFOLIO */
@@ -551,14 +671,16 @@ button {
   line-height: 1.62;
   letter-spacing: 0.03em;
   border-radius: 4px;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio .button:hover,
 .portfolio .button:focus {
   color: var(--primary-bkg-color);
   background-color: var(--accent-color);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .portf-list {
   flex-wrap: wrap;
@@ -568,7 +690,8 @@ button {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portf-list > li:hover {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .portf-img {
   position: relative;
