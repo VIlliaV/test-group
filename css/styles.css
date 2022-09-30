@@ -58,11 +58,7 @@ button {
   cursor: pointer;
   text-align: center;
 }
-.input,
-.area {
-  border-width: 0px;
-  border-style: none;
-}
+
 .section {
   padding: 94px 0;
 }
@@ -241,7 +237,7 @@ button {
   color: var(--primary-bkg-color);
   background-color: var(--accent-color);
   font-weight: 700;
-  line-height: 2;
+  line-height: 1.88;
   letter-spacing: 0.06em;
   height: 50px;
   padding: 10px 32px;
@@ -472,15 +468,16 @@ button {
   padding-left: 15px;
   font-size: 16px;
   line-height: 1.25;
-  outline: 1px solid rgba(255, 255, 255, 0.3);
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   background-color: var(--thirdary-bkg-color);
   color: rgba(255, 255, 255, 0.6);
-  transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .subscription .input:focus {
-  outline: 1px solid var(--accent-color);
+  border: 1px solid var(--accent-color);
 }
 .subscription .input::placeholder {
   color: rgba(255, 255, 255, 0.6);
@@ -545,11 +542,11 @@ button {
   border-radius: 50%;
   align-items: center;
   color: #000000;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .btn-modal:hover,
 .btn-modal:focus {
   color: var(--accent-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .userdata {
@@ -585,12 +582,13 @@ button {
   width: 100%;
   height: 40px;
   padding-left: 31px;
-  outline: 1px solid rgba(33, 33, 33, 0.2);
+  outline: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .userdata .input:focus {
-  outline: 1px solid var(--accent-color);
+  border: 1px solid var(--accent-color);
 }
 .userdata .icon {
   position: absolute;
@@ -615,7 +613,7 @@ button {
 }
 .userdata .area:focus {
   border: 1px solid var(--accent-color);
-  outline: 0px solid var(--primary-bkg-color);
+  outline: none;
 }
 .userdata .area::placeholder {
   color: rgba(117, 117, 117, 0.5);
