@@ -562,6 +562,7 @@ button {
 }
 
 .userdata .text,
+.field,
 .userdata .input,
 .userdata .area {
   display: block;
@@ -574,9 +575,16 @@ button {
   margin-bottom: 4px;
 }
 
+.userdata .test {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  translate: 0 -100%;
+}
+
 .userdata .field {
   position: relative;
-  margin-bottom: 10px;
+  margin-bottom: 28px;
 }
 .userdata .input {
   width: 100%;
